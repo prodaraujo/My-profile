@@ -18,7 +18,7 @@
 <body>
     <h1>Minhas redes sociais</h1>
     <h2>Quem sou eu?</h2>
-    <img src="Arqs/photo.jpg" alt="minha foto" width="150px" height="150px">
+    <img src="https://scontent-gru1-2.xx.fbcdn.net/v/t1.6435-9/83781575_2585529794879733_6482832557229473792_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=174925&_nc_eui2=AeESmlFEBmLVRA_b4CSX_Vqk3TYiA8Yd-WfdNiIDxh35Zyihd7eT1g4f5ViWgvZptE6SFKrnqPEbXwxlItQvY1a7&_nc_ohc=-DVCWkB1KToAX8QWKDk&_nc_ht=scontent-gru1-2.xx&oh=00_AfCzbMXlFCh-XKsqPuoUVFLQGEDTXg27wfXLRK2K9e6ASg&oe=64807BE5" alt="minha foto" width="150px" height="150px">
     <p id="p1">Meu nome é <strong>Paulo Araújo</strong>, tenho 21 anos, sou estudande de Engenharia de Software, estou no <br>final do segundo período, atualmente sou Assistente Operacional na <a href="https://wiz.co/wiz-concept/" target="_blank" rel="nofollow">Wiz Concept</a>, que é uma <br>grande corretora de seguros, sou cristão e gosto muito de música.</p>
     <h2>Como falar comigo?</h2>
     <ul id="list" type="square">
