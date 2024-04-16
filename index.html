@@ -1,406 +1,97 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tia Rosa Coffee Shop</title>
-    <link rel="shortcut icon" href="https://img.icons8.com/doodle/48/cafe--v3.png" type="image/x-icon">
+    <title>Meu Perfil</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cookie&family=Fuggles&family=Kaushan+Script&display=swap');
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
 
-/* Reset de estilos para remover margens e preenchimentos padrão */
-body, h1, h2, ul, li, p {
-    margin: 0;
-    padding: 0;
-}
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 
-/* Estilo para o corpo da página */
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f1dfff;
-    color: #333;
-    line-height: 1.6;
-}
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
 
+        .profile-pic {
+            display: block;
+            margin: 0 auto;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
 
-/* Estilo para o cabeçalho (header) */
-header {
-    background-color: #a87ecb;
-    color: #ffffff;
-    text-align: center;
-    padding: 1em 0;
-}
+        .profile-pic img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-.logo {
-    font-family: 'Cookie', cursive;
-    color: #4a2a60;
-    font-size: 60px;
-}
+        .info {
+            text-align: center;
+        }
 
-header h1 {
-    font-size: 2.5em;
-    margin-bottom: 0.5em;
-    font-weight: bold;
-}
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
 
-header nav ul {
-    list-style: none;
-}
+        .btn:hover {
+            background-color: #0056b3;
+        }
 
-header nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
+        @keyframes slideIn {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
 
-
-
-header nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-
-header nav ul li a:hover {
-    color: #5a0080; /* Cor de destaque no hover */
-}
-
-/* Estilo para espaçar parágrafos */
-.text-content .width-paragrafo {
-    margin-top: 0px; /* Espaçamento acima do parágrafo */
-    margin-bottom: 40px; /* Espaçamento abaixo do parágrafo */
-    margin-left: 0; /* Espaçamento à esquerda do parágrafo (opcional) */
-    margin-right: 50px; /* Espaçamento à direita do parágrafo (opcional) */
-}
-
-#sobre .width-paragrafo {
-    margin-top: 0px; /* Espaçamento acima do parágrafo */
-    margin-bottom: 20px; /* Espaçamento abaixo do parágrafo */
-    margin-left: 0; /* Espaçamento à esquerda do parágrafo (opcional) */
-    margin-right: 10em; /* Espaçamento à direita do parágrafo (opcional) */
-}
-
-/* Estilo para as seções */
-section {
-    padding: 2em;
-    background-color: #fff;
-    margin-bottom: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    transition: transform 0.3s;
-}
-
-section h2 {
-    font-size: 1.5em;
-    margin-bottom: 0.5em;
-}
-
-
-/* Efeito de escala no hover para as seções */
-section:hover {
-    transform: scale(1.01);
-} 
-
-
-
-
-/* Estilo para a seção que contém texto e imagem */
-#sobre {
-    display: flex; /* Usa flexbox para alinhar os elementos horizontalmente */
-    align-items: center; /* Alinha verticalmente os elementos ao centro */
-    padding: 20px; /* Espaçamento interno para a seção */
-    background-color: #ffffff; /* Cor de fundo da seção */
-}
-
-
-/* Estilo para o conteúdo de texto */
-.texto {
-    flex: 1; /* Ocupa todo o espaço disponível à esquerda */
-    padding: 20px; /* Espaçamento interno para o texto */
-    font-size: 18px; /* Tamanho da fonte do texto */
-    color: #333; /* Cor do texto */
-}
-
-/* Estilo para a imagem */
-.imagem {
-    flex: 1; /* Ocupa todo o espaço disponível à direita */
-    text-align: center; /* Centraliza a imagem horizontalmente */
-}
-
-/* Estilo para a imagem dentro da div imagem */
-.imagem img {
-    max-width: 100%; /* A imagem se ajusta automaticamente à largura da div */
-    height: auto; /* Mantém a proporção da imagem */
-    display: block; /* Remove espaços em branco abaixo da imagem */
-    border-radius: 10px; /* Um valor maior cria cantos mais arredondados */
-}
-
-
-
-
-/* Estilo para a seção */
-.content-section {
-    display: flex; /* Exibe os elementos como flexbox */
-    align-items: center; /* Alinha verticalmente os elementos ao centro */
-    padding: 40px; /* Espaçamento interno para a seção */
-    background-color: #f9f9f9; /* Cor de fundo da seção */
-}
-
-/* Estilo para o conteúdo de texto */
-.text-content {
-    flex: 1; /* Ocupa o espaço disponível restante no flex container */
-    padding: 20px; /* Espaçamento interno para o texto */
-    font-size: 18px; /* Tamanho da fonte do texto */
-    color: #333; /* Cor do texto */
-}
-
-/* Estilo para a imagem */
-.image-content {
-    flex: 1; /* Ocupa o espaço disponível restante no flex container */
-    text-align: center; /* Centraliza a imagem horizontalmente */
-    border-radius: 10px; /* Um valor maior cria cantos mais arredondados */
-}
-
-/* Estilo para a imagem dentro da div image-content */
-.image-content img {
-    width: 10%;
-    max-width: 100%; /* A imagem se ajusta automaticamente à largura da div */
-    height: auto; /* Mantém a proporção da imagem */
-    display: block; /* Remove espaços em branco abaixo da imagem */
-}
-
-/* Estilo para o ícone do WhatsApp (imagem) dentro do botão */
-.whatsapp-button .icon-whatsapp {
-    fill: #fff; /* Cor branca */
-}
-
-/* Estilo para o ícone do Instagram (imagem) dentro do botão */
-.instagram-button .icon-instagram {
-    fill: #fff; /* Cor branca */
-}
-
-
-/* Estilo para o botão de WhatsApp */
-.whatsapp-button {
-    display: inline-flex;
-    align-items: center;
-    background-color: #25D366; /* Cor do WhatsApp */
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-}
-
-.whatsapp-button:hover {
-    background-color: #128C7E; /* Cor de destaque no hover */
-}
-
-/* Estilo para o ícone do WhatsApp (imagem) dentro do botão */
-.whatsapp-button img {
-    max-width: 25px; /* Largura máxima da imagem */
-    margin-right: 0px; /* Espaçamento à direita da imagem */
-}
-
-
-/* Estilo para o botão de Instagram */
-.instagram-button {
-    display: inline-flex;
-    align-items: center;
-    background-color: #C13584; /* Cor do Instagram */
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-}
-
-.instagram-button:hover {
-    background-color: #8A3AB9; /* Cor de destaque no hover */
-}
-
-/* Estilo para o ícone do Instagram (imagem) dentro do botão */
-.instagram-button img {
-    max-width: 25px; /* Largura máxima da imagem */
-    margin-right: 0px; /* Espaçamento à direita da imagem */
-}
-
-
-
-/* Estilo para o rodapé (footer) */
-footer {
-    text-align: center;
-    background-color: #333;
-    color: #ffffff;
-    padding: 1em 0;
-}
-
-/* Estilo para imagens dentro das seções */
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Barra de rolagem no Internet Explorer e Edge */
-::-webkit-scrollbar {
-    width: 8px; /* Largura da barra de rolagem vertical */
-    height: 8px; /* Altura da barra de rolagem horizontal */
-}
-
-/* Estilize a alça da barra de rolagem */
-::-webkit-scrollbar-thumb {
-    background-color: #786f86; /* Cor da alça da barra de rolagem */
-    border-radius: 4px; /* Borda arredondada da alça */
-}
-
-/* Estilize a trilha da barra de rolagem */
-::-webkit-scrollbar-track {
-    background-color: #f2daff; /* Cor da trilha da barra de rolagem */
-}
-
-.container {
-    overflow-x: hidden;
-}
+        .animated {
+            animation: slideIn 1s ease;
+        }
     </style>
 </head>
-<body class="container">
-    
-    <header>
-        <h1 class="logo">Tia Rosa Coffee Shop</h1>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#sobre">Sobre Nós</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>   
-
-    <section id="inicio" class="content-section">
-        <div class="text-content">
-        <h2 class="width-paragrafo">Bem-Vindo à Cafeteria Tia Rosa</h2>
-            <p class="width-paragrafo">Um lugar onde o aroma do café fresco se mistura com a doçura das sobremesas caseiras, criando uma experiência única para os amantes de café e apreciadores de delícias culinárias.</p>
-            <p>Localizada no coração da cidade, a Cafeteria da Tia Rosa é muito mais do que apenas um lugar para tomar café; é um refúgio acolhedor e encantador, onde cada xícara de café é preparada com paixão e dedicação.</p>
+<body>
+    <div class="container animated">
+        <h1>Perfil Profissional</h1>
+        <div class="profile-pic">
+            <img src="https://media.licdn.com/dms/image/D4D03AQFeI7YRSlrBuA/profile-displayphoto-shrink_800_800/0/1713198783874?e=1718841600&v=beta&t=AkfsWM6JlxrA0Qy3d2irepUTyZn4JzrqXU68jdnclnc" alt="Profile Picture">
         </div>
-
-        <img class="image-content" src="https://www.tastingtable.com/img/gallery/coffee-brands-ranked-from-worst-to-best/intro-1645231221.jpg" width="50px  " alt="Uma xícara de café delicioso">
-    </section>
-
-    <section id="menu">
-        <h2>Menu</h2>
-        <ul>
-            <li><strong>Café Espresso</strong> - R$ 5,00</li>
-            <li><strong>Cappuccino</strong> - R$ 7,00</li>
-            <li><strong>Latte</strong> - R$ 6,00</li>
-            <li><strong>Muffin de Blueberry</strong> - R$ 4,00</li>
-            <li><strong>Pão de Queijo</strong> - R$ 3,00</li>
-            <li><strong>Macchiato Caramelo</strong> - R$ 6,50</li>
-            <li><strong>Chá Verde</strong> - R$ 4,50</li>
-            <li><strong>Torrada de Abacate</strong> - R$ 5,50</li>
-            <li><strong>Brownie de Chocolate</strong> - R$ 4,50</li>
-            <li><strong>Sanduíche de Frango Grelhado</strong> - R$ 8,00</li>
-            <li><strong>Mocha</strong> - R$ 7,50</li>
-            <li><strong>Waffle de Morango</strong> - R$ 6,50</li>
-            <li><strong>Chococino</strong> - R$ 7,50</li>
-            <li><strong>Torta de Maçã</strong> - R$ 5,00</li>
-        </ul>
-        
-        
-    </section>
-
-    <section id="sobre">
-
-        <div class="texto">
-            <h2>Sobre Nós</h2>
-            <p class="width-paragrafo">Em nossa cafeteria, levamos o café a sério. Oferecemos uma seleção cuidadosamente escolhida de grãos de café de origem única, de diversas partes do mundo. Nossos baristas experientes dominam a arte de preparar o café perfeito, seja um espresso encorpado, um cappuccino cremoso ou um café filtrado suave.</p>
-            <p class="width-paragrafo">Além disso, nossos clientes têm a oportunidade de explorar uma variedade de métodos de preparo, desde a clássica prensa francesa até as modernas técnicas de pour-over. Cada método revela uma nova dimensão de sabor, permitindo que você encontre sua combinação favorita.</p>
-            <p class="width-paragrafo">Venha nos visitar e descubra por que a Cafeteria da Tia Rosa se tornou um destino favorito para os amantes de café e aqueles que buscam um refúgio acolhedor. Estamos ansiosos para recebê-lo e compartilhar a paixão pelo café e pelas delícias caseiras que tornam nossa cafeteria tão especial.</p>
+        <div class="info">
+            <p>Nome: Paulo Araújo</p>
+            <p>Profissão: Desenvolvedor Web</p>
+            <p>Localização: Brasília, Brasil</p>
+            <a href="contato.html" class="btn">Contatar</a>
         </div>
-
-        <div class="imagem">
-            <img src="https://j7e9e8a2.stackpathcdn.com/wp-content/uploads/2016/04/interior-coffee-shop-hunters-amsterda.jpg" alt="coffee Shop">
-        </div>
-
-    </section>
-
-    <section id="contato">
-        <h2>Contato</h2>
-        <p>Estamos localizados em:</p>
-     <address>
-        <strong>Endereço:</strong> SHS Quadra 5, Bloco A, Loja 101<br>
-        <strong>Bairro:</strong> Asa Sul<br>
-        <strong>Cidade:</strong> Brasília<br>
-        <strong>CEP:</strong> 70070-000<br>
-        <strong>Estado:</strong> DF<br>
-        <strong>Telefone:</strong> (61) 99999 9999<br>
-        <strong>Email:</strong> contato@cafebrasilia.com.br<br>
-    </address>
-        <p>Entre em contato conosco através do Instagram ou WhatsApp:</p>
-        <ul>
-            <li class="instagram-button">
-                <a href="https://www.instagram.com/tiarosacoffeeshop" target="_blank">
-                    <img class="icon-instagram" src="https://img.icons8.com/ios/50/instagram-new--v1.png" alt="Instagram">
-                </a>
-            </li>
-            <li class="whatsapp-button">
-                <a href="https://wa.me/seunumerodetelefone" target="_blank">
-                    <img class="icon-whatsapp" src="https://img.icons8.com/ios/50/000000/whatsapp--v1.png" alt="WhatsApp">
-                </a>
-            </li>
-        </ul>
-    </section>
+    </div>
 
     <script>
-        // Adicione um evento de clique suave para a navegação
-document.querySelectorAll('header nav ul li a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
-        const targetSection = document.getElementById(targetId);
-        if (targetSection) {
-            window.scrollTo({
-                top: targetSection.offsetTop,
-                behavior: 'smooth'
-            });
+        window.onload = function() {
+            document.querySelector('.container').classList.add('animated');
         }
-    });
-});
-
-
-// Animação de destaque para itens de menu ao passar o mouse
-document.querySelectorAll('#menu ul li').forEach(item => {
-    item.addEventListener('mouseenter', function() {
-        this.style.backgroundColor = '#5a0080'; // Cor de destaque ao passar o mouse
-        this.style.color = '#fff'
-        this.style.transition = 'background-color 0.2s';
-    });
-
-    item.addEventListener('mouseleave', function() {
-        this.style.backgroundColor = 'transparent'; // Retorna à cor padrão ao remover o mouse
-        this.style.color = '#000';
-    });
-});
-
-
-// Animação de crescimento sutil para imagens nas seções
-document.querySelectorAll('section img').forEach(img => {
-    img.addEventListener('mouseenter', function() {
-        this.style.transform = 'scale(1.02)'; // Zoom suave ao passar o mouse
-        this.style.transition = 'transform 0.3s';
-    });
-
-    img.addEventListener('mouseleave', function() {
-        this.style.transform = 'scale(1)'; // Retorna ao tamanho normal ao remover o mouse
-    });
-});
     </script>
-
-    <footer>
-        <p>&copy; 2010 Tia Rosa Coffee Shop </p>
-    </footer>
 </body>
 </html>
